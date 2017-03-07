@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms_Widgets_JQuery</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/converter-style.css">
+    <link rel="stylesheet" href="./css/weather-style.css">
+    <link rel="stylesheet" href="./css/player-style.css">
+    <link rel="stylesheet" href="./css/buttons-style.css">
+    <link rel="stylesheet" href="./css/login-style.css">
+    <link rel="stylesheet" href="./css/chat-style.css">
+    <link rel="stylesheet" href="./css/circles-style.css">
+    <link href="./jquery/jquery-ui.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./jquery/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+    <div class="converter clearfix">
+        <ul class="currency-list">
+            <li>
+                <div class="currency-name">
+                    <p>USD</p>
+                </div>
+                <input id="usd" type="text" class="currency-input usd" value="0" maxlength="5">
+                <label for="usd">$</label>
+            </li>
+            <li>
+                <div class="currency-name">
+                    <p>GBP</p>
+                </div>
+                <input id="gbr" type="text" class="currency-input gbr" readonly>
+                <label for="gbr">&#163</label>
+            </li>
+        </ul>
+        <nav class="converter-menu">
+            <button class="convert-button"></button>
+            <button class="number-pad"></button>
+            <button class="add-currency"></button>
+        </nav>
+    </div>
+
+    <div class="weather clearfix">
+        <div class="weather-board">
+            <div class="weather-info">
+                <p class="temperature">
+                    <p class = "degree">&#176</p>
+                </p>
+                <p class="zone"></p>
+                <p class="time"></p>
+            </div>
+            
+            <ul class="slider"></ul>
+            <div class="slideFoto"></div>
+            <ul class="checkList"></ul>
+
+            <form class = "addCity">
+                <input id="zone" type="text" placeholder="name">
+                <input id="temperature" type="text" placeholder="t, F"> 
+                <input id="link" type="text" placeholder="link">
+                <input id = "addNewCity" value="Add a new city" type ="button">
+            </form>
+
+        </div>
+
+        <nav class="weather-menu">
+            <button id = "fahrenheit" class="scale-button checkedScale">F</button>
+            <button id = "celsius" class="scale-button">C</button>
+            <button class="add-place-button"></button>
+            <button class="list-view-button"></button>
+        </nav>
+    </div>
+
+    <div class="circles">
+        <div class="circle-around">
+            <canvas id = "circle-around-diagramm" width="160" height="160"></canvas>
+            <div class="circle-around-inside"></div>
+        </div>
+  
+        <div class="circle-fill">
+            <canvas id = "circle-fill-diagramm" width="160" height="160"></canvas>
+        </div>
+        <div class="circle-straight">
+            <div class="circle-straight-0-value"></div>
+            <div class="circle-straight-1-value"></div>
+            <div class="circle-straight-2-value"></div>
+            <div class="circle-straight-3-value"></div>
+        </div>
+        <input class="circle-input-first-value" placeholder="value %" type="number" name="" value="">
+        <input class="circle-input-second-value" placeholder="value %" type="number" name="" value="">
+        <input class="circle-input-third-value" placeholder="value %" type="number" name="" value="">
+        <button class="circle-button">DRAW</button>
+    </div>
+
+
+    <div class="buttons-block clearfix">
+        <input type="text" class="valid-input" placeholder="choose date" id="date">
+    </div>
+    
+
+
+    <div class="login-block">
+        <div class="email-block">
+            <input type="email" id="email" placeholder="Email Address...">
+            <label for="email"></label>
+        </div>
+        <div class="password-block">
+            <input type="password" id="password" placeholder="Password...">
+            <label for="password"></label>
+        </div>
+        <nav>
+            <button class="signup-button">Sign up</button>
+            <button class="signin-button">Sign in</button>
+            <a href="#" class="tooltipe"></a>
+        </nav>
+    </div>
+
+    <div class="chat clearfix">
+        <nav class="chat-menu">
+            <button class="menu-button"></button>
+			      <input id="newUserName" type="text" placeholder="New User">
+            <button class="add-dlg-button"></button>
+        </nav>
+        <ul class="message-list">
+            <li class="online">
+                <a href=""><img class="avatar" src="./img/1.png" alt="Profile photo"></a>
+                <h3>Yaroslav Lozhkin</h3>
+                <p class="message">Alright got it!</p>
+            </li>
+            <li class="sent offline">
+                <a href=""><img class="avatar" src="./img/2.png" alt="Profile photo"></a>
+                <h3>Michael Zenaty</h3>
+                <p class="message"></p>
+            </li>
+            <li class="typing">
+                <a href=""><img class="avatar" src="./img/3.png" alt="Profile photo"></a>
+                <h3>Wells Riley</h3>
+                <p class="message"></p>
+            </li>
+            <li class="not-delivered">
+                <a href=""><img class="avatar" src="./img/4.png" alt="Profile photo"></a>
+                <h3>Matt Vickers</h3>
+                <p class="message"></p>
+            </li>
+            <li class="busy">
+                <a href=""><img class="avatar" src="./img/5.png" alt="Profile photo"></a>
+                <h3>Divya Manian</h3>
+                <p class="message">You can download it on git
+                    You can download it on git</p>
+            </li>
+            <li>
+                <a href=""><img class="avatar" src="./img/6.png" alt="Profile photo"></a>
+                <h3>Vin Thomas</h3>
+                <p class="message">Thank you!</p>
+            </li>
+        </ul>
+    </div>
+  
+    <script src="./js/chat.js"></script>
+    <script src="./js/converter.js"></script>
+    <script src="./js/weather.js"></script>
+    <script src="./js/weatherEvents.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/date.js"></script>
+    <script src="./js/circles.js"></script>
+</body>
+</html>
